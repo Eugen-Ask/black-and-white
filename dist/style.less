@@ -1,0 +1,74 @@
+@circleHeight: 100px;
+
+body {
+  text-align: center;
+  background-color: #00b073;
+  font-family: 'Baloo Tamma', cursive;
+}
+
+.header {
+  color: white;
+  .logo {
+    font-size: 100px;
+    margin: 0;
+    height: 100px;
+  }
+  .tip {
+    font-size: 28px;
+    margin-top: 24px;
+  }
+}
+
+.black {
+  animation: make-black .3s;
+  background-color: #2a2a2a;
+}
+
+.white {
+  animation: make-white .3s;
+  background-color: white;
+}
+
+.element {
+  display: inline-block;
+  width: @circleHeight;
+  height: @circleHeight;
+  border-radius: 100px;
+  box-shadow: rgba(0,0,0,0.5) 5px 5px 10px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.board {
+  display: inline-block;
+  padding: 10px;
+  border: double rgba(66, 66, 66, 0.6) 40px;
+}
+
+@keyframes make-black {
+  0%   {
+    background-color: white;
+    transform: rotateY(0deg);
+  }
+  50%   {
+    transform: rotateY(90deg);
+  }
+  100% {
+    background-color: #2a2a2a;
+    transform: rotateY(0);
+  }
+}
+
+@keyframes make-white {
+  0%   {
+    background-color: #2a2a2a;
+    transform: rotateY(0);
+  }
+  50%   {
+    transform: rotateY(90deg);
+  }
+  100% {
+    background-color: white;
+    transform: rotateY(0deg);
+  }
+}

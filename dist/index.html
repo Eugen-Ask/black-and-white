@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Tamma" rel="stylesheet">
+</head>
+<body>
+<div ng-app="app" ng-controller="MainCtrl">
+    <header class="header">
+        <h1 class="logo">Black or white</h1>
+        <h3 class="tip">Try to make all the checkers same color</h3>
+    </header>
+    <div class="board">
+        <div ng-repeat="(y, row) in board track by $index">
+            <div ng-repeat="(x, el) in row track by $index"
+                ng-click="invert(x, y)"
+                 ng-class="['element', el ? 'black' : 'white']"
+            ></div>
+        </div>
+    </div>
+</div>
+<script src="bundle.js"></script>
+</body>
+</html>
